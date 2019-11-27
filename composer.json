@@ -23,7 +23,7 @@
     "phing/phing": "~2.9",
     "drush/drush": "^8.1.15 || ^9.0"
   },
-  "conflict": {
+  "replace": {
     "continuousphp/phing-drush-task": "*"
   },
   "autoload": {
