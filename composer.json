@@ -1,6 +1,6 @@
 {
-  "name":     "continuousphp/phing-drush-task",
-  "homepage": "https://github.com/continuousphp/phing-drush-task",
+  "name":     "palantirnet/phing-drush-task",
+  "homepage": "https://github.com/palantirnet/phing-drush-task",
   "description": "Drush task for Phing",
   "type": "library",
   "license": "GPL-2.0+",
@@ -12,6 +12,10 @@
     {
       "name": "Pierre Buyle",
       "email": "pierre@buyle.org"
+    },
+    {
+      "name": "Bec White",
+      "email": "white@palantir.net"
     }
   ],
   "require": {
