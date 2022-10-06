@@ -21,7 +21,7 @@
   "minimum-stability": "dev",
   "require": {
     "drush/drush": "^8.1.15 || ^9.0 || ^10.0 || ^11.0",
-    "phing/phing": "dev-main"
+    "phing/phing": "^3"
   },
   "replace": {
     "continuousphp/phing-drush-task": "*"
