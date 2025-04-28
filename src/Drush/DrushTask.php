@@ -12,7 +12,9 @@
 
 namespace Drush;
 
-use PhingFile;
+use Phing\Io\File;
+use Phing\Task;
+use Phing\Exception\BuildException;
 
 /**
  * Option
@@ -23,7 +25,7 @@ use PhingFile;
  * @link        https://github.com/drush-ops/drush
  * @license     http://opensource.org/licenses/MIT MIT License
  */
-class Task extends \Task {
+class DrushTask extends Task {
 
   /**
    * @var string The executed Drush command.
@@ -113,7 +115,7 @@ class Task extends \Task {
   protected $color = FALSE;
 
   /**
-   * @var PhingFile Working directory.
+   * @var File Working directory.
    */
   protected $dir;
 
@@ -291,11 +293,11 @@ class Task extends \Task {
   /**
    * Specify the working directory for executing this command.
    *
-   * @param PhingFile $dir Working directory
+   * @param File $dir Working directory
    *
    * @return void
    */
-  public function setDir(PhingFile $dir) {
+  public function setDir(File $dir) {
     $this->dir = $dir;
   }
 
@@ -413,7 +415,7 @@ class Task extends \Task {
     }
     // Build fail.
     if ($this->haltOnError && $return != 0) {
-      throw new \BuildException("Drush exited with code $return");
+      throw new BuildException("Drush exited with code $return");
     }
     return $return != 0;
   }
